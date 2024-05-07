@@ -166,7 +166,7 @@ function Itemslist($items){
 }   
 function AddMovie(){
     ?>
-        <h1 style="text-align: center; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
+        <h1 style="text-align: center;padding-top: 30px; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
         <div class="container">
             <div style="text-align: center;">
                 <div class="Form">

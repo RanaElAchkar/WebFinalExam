@@ -124,6 +124,32 @@ https://templatemo.com/tm-589-lugx-gaming
             </div>
         </div>
     </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        function AddFrm() {
+            let frm = document.querySelector("form[name='AddForm']")
+            let id = frm.elements["id"].value;
+            let name = frm.elements["name"].value;
+            let desc = frm.elements["desc"].value;
+            frm.submit();
+
+        }
+        function ResetFrm() {
+            let frm = document.querySelector("form[name='AddForm']")
+            frm.elements["id"].value = "";
+            frm.elements["name"].value = "";
+            frm.elements["desc"].value = "";
+
+        }
+
+    </script>
 
 </body>
 

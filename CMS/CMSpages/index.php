@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+
+    
+?>
+
 <html lang="en">
 
 <head>
@@ -65,45 +70,38 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
-        <h1 style="text-align: center; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
+        <h1 style="text-align: center; padding-bottom: 30px;"><span>Welcome..! Log In here</span></h1>
         <div class="container">
             <div style="text-align: center;">
                 <div class="Form">
-                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Movie</h2>
-                    <form name="AddForm" id="add" action="AddMovie.php" method="POST">
+                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Log In</h2>
+                    <form name="LogInForm" id="login" action="login.php" method="POST">
+
                         <div class="frm-element">
                             <div class="frm-label">
-                                <label for="id">Movie ID: </label>
+                                <label for="username">Username: </label>
                             </div>
-                            <input type="text" name="id" class="textfield">
+                            <input type="text" name="username" id="username"class="textfield">
                         </div>
                         <br>
                         <br>
                         <div class="frm-element">
                             <div class="frm-label">
-                                <label for="name">Movie Name: </label>
+                                <label for="password">Password: </label>
                             </div>
-                            <input type="text" name="name" class="textfield">
+                            <input type="password" name="password" id="password" class="textfield">
                         </div>
                         <br>
                         <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="desc">Movie Description: </label>
-                            </div>
-                            <input type="text" name="desc" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <input type="button" name="add" value="Add" class="Button" style="margin-right: 30px;"
-                            onclick="AddFrm()">
+                        <input type="button" name="signup" value="Log In" class="Button" style="margin-right: 30px;"
+                            onclick="LogInFrm()">
                         <input type="button" name="cancel" value="Cancel" class="Button" style="margin-left: 30px;"
                             onclick="ResetFrm()">
                         <br>
                         <br>
 
 
-                        
+                        <h3 style="padding-top: 40px;padding-bottom: 40px;">Create an account? <a href="SignUp.php">Sign up here</a></h3>
                 </div>
             </div>
 
@@ -124,6 +122,7 @@ https://templatemo.com/tm-589-lugx-gaming
             </div>
         </div>
     </footer>
+
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -133,23 +132,28 @@ https://templatemo.com/tm-589-lugx-gaming
     <script src="../assets/js/counter.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script>
-        function AddFrm() {
-            let frm = document.querySelector("form[name='AddForm']")
-            let id = frm.elements["id"].value;
-            let name = frm.elements["name"].value;
-            let desc = frm.elements["desc"].value;
-            frm.submit();
+      function LogInFrm() {
+          let username = document.getElementById("username").value;
+          console.log(username);
+          let password = document.getElementById("password").value;
+          console.log(password);
+          if ((username == "") || (password == "")) {
+              alert("Please fill in the username and password");
+          }
+          else {
+              document.getElementById("login").submit();
 
-        }
-        function ResetFrm() {
-            let frm = document.querySelector("form[name='AddForm']")
-            frm.elements["id"].value = "";
-            frm.elements["name"].value = "";
-            frm.elements["desc"].value = "";
+          }
 
-        }
 
-    </script>
+      }
+      function ResetFrm() {
+          document.getElementById("username").value = "";
+          document.getElementById("password").value = "";
+          alert("clear");
+      }
+
+  </script>
 
 </body>
 

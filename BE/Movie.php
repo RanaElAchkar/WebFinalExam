@@ -1,5 +1,5 @@
 <?php
-class Post{
+class Movie{
     public $movie;
     public $description;
     public $is_available;   

@@ -1,22 +1,10 @@
 <?php
-
-$dbhost="localhost";
-$dbname="moviebuff";
-$dbuser="root";
-$dbpass="";
-$db=null;
-    try {
-		$db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);		
-	} catch (PDOException $e) {
-		print "Error!: " . $e->getMessage() . "<br/>";
-		die();
-	}
+require_once("common/connect.php");
 
     $un=$_POST["username"];      
     $pass=$_POST["password"];    
 
-    $query="select ID from tbl_users where USERNAME='".$un."' AND PASSWORD=PASSWORD('".$pass."')";
-    //echo $query;
+    $query="select user_id from users where USERNAME='".$un."' AND PASSWORD=PASSWORD('".$pass."')";
     $stmt=$db->query($query);
     $rowCount=$stmt->rowCount();
     echo $rowCount;

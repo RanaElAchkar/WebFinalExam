@@ -1,0 +1,7 @@
+diff a/BE/Movie.php b/BE/Movie.php	(rejected hunks)
+@@ -1,5 +1,4 @@
+ <?php
+-class Post{
+ class Movie{
+     public $movie;
+     public $description;

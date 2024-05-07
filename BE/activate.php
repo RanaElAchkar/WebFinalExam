@@ -3,7 +3,7 @@ require_once("common/connect.php");
 
 function ToggleAvailability($movie_id, $new_status) {
     $db = dbconnect();
-    
+
     $update_query = "UPDATE movies SET `is_available` = $new_status WHERE id = $movie_id";
     $db->query($update_query);
 }

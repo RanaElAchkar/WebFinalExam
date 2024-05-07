@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-
-     <?php
+<?php
+     session_start();
+     session_unset();
+     session_destroy();
      require_once("../Controller/ViewController.php");
      require_once("../Model/ViewModel.php");
      require_once("../common/commonfunctions.php");
     
-     ?> 
-
-
+?> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

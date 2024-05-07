@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
+    session_start();
     require_once("../Model/ViewModel.php");
     require_once("../../BE/listMovies.php");
     require_once("../common/commonfunctions.php");
-   
-    ?>
+    if(!isset($_SESSION['username'])){
+        header("location: index.php");
+        exit();
+     }
+?>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
     <meta charset="utf-8">

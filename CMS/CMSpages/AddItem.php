@@ -1,11 +1,15 @@
+<?php
+    session_start();
+    require_once("../Model/ViewModel.php");
+    require_once("../../BE/listMovies.php");
+    require_once("../common/commonfunctions.php");
+    if(!isset($_SESSION['username'])){
+        header("location: index.php");
+        exit();
+     }
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-    require_once("../Controller/ViewController.php");
-    require_once("../Model/ViewModel.php");
-    require_once("../common/commonfunctions.php");
-?>
-
 <head>
 
     <meta charset="utf-8">

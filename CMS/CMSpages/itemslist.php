@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    require_once("../Controller/ViewModel");   
+?>
 
 <head>
 
@@ -71,45 +74,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
-<?php
-function Itemslist($items){
-?>
-            <h1>
-                    <center>
-                        List of Users
-                    </center>
-                </h1>
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-            
-                    <?php
-                    foreach ($items as $item) { ?>
-                        <tr>
-                            <td><?php echo $item->id; ?></td>
-                            <td><?php echo $item->name; ?></td>
-                            <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
-                            <td>
-                                <form name="activateForm" method="post" action="../BE/AddMovie.php">
-                                    <input type="hidden" name="id" value="<?php echo $item->id; ?>">
-                                    <input type="hidden" name="activate" value="<?php echo $user->isAvaliable ? 0 : 1; ?>">
-                                    <input type="submit" value="<?php echo $user->isAvaliable ? "NotAvaliable" : "Avaliable"; ?>">
-                                </form>
-                            </td>
-
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </table>
-            <?php
-            }
-    
+    <?php
     $items=listMovies();
     Itemslist($items)
 

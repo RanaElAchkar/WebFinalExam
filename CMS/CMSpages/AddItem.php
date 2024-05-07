@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-
-    
+    require_once("../Controller/ViewController");
+    require_once("../Controller/ViewModel");   
 ?>
 
 <head>
@@ -69,54 +69,9 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
-        <h1 style="text-align: center; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
-        <div class="container">
-            <div style="text-align: center;">
-                <div class="Form">
-                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Movie</h2>
-                    <form name="AddForm" id="add" action="AddMovie.php" method="POST">
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="id">Movie ID: </label>
-                            </div>
-                            <input type="text" name="id" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="name">Movie Name: </label>
-                            </div>
-                            <input type="text" name="name" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="desc">Movie Description: </label>
-                            </div>
-                            <input type="text" name="desc" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <input type="button" name="add" value="Add" class="Button" style="margin-right: 30px;"
-                            onclick="AddFrm()">
-                        <input type="button" name="cancel" value="Cancel" class="Button" style="margin-left: 30px;"
-                            onclick="ResetFrm()">
-                        <br>
-                        <br>
-
-
-                        
-                </div>
-            </div>
-
-            </form>
-
-
-
-
-          </div>
+    <?php
+      AddMovie();
+    ?>
     </div>
 
 
@@ -136,24 +91,10 @@ https://templatemo.com/tm-589-lugx-gaming
     <script src="../assets/js/owl-carousel.js"></script>
     <script src="../assets/js/counter.js"></script>
     <script src="../assets/js/custom.js"></script>
-    <script>
-        function AddFrm() {
-            let frm = document.querySelector("form[name='AddForm']")
-            let id = frm.elements["id"].value;
-            let name = frm.elements["name"].value;
-            let desc = frm.elements["desc"].value;
-            frm.submit();
-
-        }
-        function ResetFrm() {
-            let frm = document.querySelector("form[name='AddForm']")
-            frm.elements["id"].value = "";
-            frm.elements["name"].value = "";
-            frm.elements["desc"].value = "";
-
-        }
-
-    </script>
+    <?php
+      AddScript();
+    ?>
+    </div>
 
 </body>
 

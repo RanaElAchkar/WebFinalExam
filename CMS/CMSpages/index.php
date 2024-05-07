@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-
-    
+    require_once("../Controller/ViewController");
+    require_once("../Controller/ViewModel");   
 ?>
 
 <html lang="en">
@@ -70,47 +70,9 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
-        <h1 style="text-align: center; padding-bottom: 30px;"><span>Welcome..! Log In here</span></h1>
-        <div class="container">
-            <div style="text-align: center;">
-                <div class="Form">
-                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Log In</h2>
-                    <form name="LogInForm" id="login" action="login.php" method="POST">
-
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="username">Username: </label>
-                            </div>
-                            <input type="text" name="username" id="username"class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="password">Password: </label>
-                            </div>
-                            <input type="password" name="password" id="password" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <input type="button" name="signup" value="Log In" class="Button" style="margin-right: 30px;"
-                            onclick="LogInFrm()">
-                        <input type="button" name="cancel" value="Cancel" class="Button" style="margin-left: 30px;"
-                            onclick="ResetFrm()">
-                        <br>
-                        <br>
-
-
-                        <h3 style="padding-top: 40px;padding-bottom: 40px;">Create an account? <a href="SignUp.php">Sign up here</a></h3>
-                </div>
-            </div>
-
-            </form>
-
-
-
-
-          </div>
+      <?php
+      LogIn();
+      ?>
     </div>
 
 
@@ -131,29 +93,10 @@ https://templatemo.com/tm-589-lugx-gaming
     <script src="../assets/js/owl-carousel.js"></script>
     <script src="../assets/js/counter.js"></script>
     <script src="../assets/js/custom.js"></script>
-    <script>
-      function LogInFrm() {
-          let username = document.getElementById("username").value;
-          console.log(username);
-          let password = document.getElementById("password").value;
-          console.log(password);
-          if ((username == "") || (password == "")) {
-              alert("Please fill in the username and password");
-          }
-          else {
-              document.getElementById("login").submit();
+    <?php
+      LogInScript();
+    ?>
 
-          }
-
-
-      }
-      function ResetFrm() {
-          document.getElementById("username").value = "";
-          document.getElementById("password").value = "";
-          alert("clear");
-      }
-
-  </script>
 
 </body>
 

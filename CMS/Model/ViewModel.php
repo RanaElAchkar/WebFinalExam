@@ -131,46 +131,133 @@ function LogIn(){
           </div>
 <?php
 }
-function list($users){
+function Itemslist($items){
 ?>
-<h1>
-        <center>
-            List of Users
-        </center>
-    </h1>
-    <table>
-        <tr>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Status</th>
-            <th></th>
-            <th></th>
-        </tr>
+            <h1>
+                    <center>
+                        List of Items
+                    </center>
+                </h1>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+            
+                    <?php
+                    foreach ($items as $item) { ?>
+                        <tr>
+                            <td><?php echo $item->id; ?></td>
+                            <td><?php echo $item->name; ?></td>
+                            <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
+                            <td>
+                                <form name="activateForm" method="post" action="../BE/AddMovie.php">
+                                    <input type="hidden" name="id" value="<?php echo $item->id; ?>">
+                                    <input type="hidden" name="activate" value="<?php echo $user->isAvaliable ? 0 : 1; ?>">
+                                    <input type="submit" value="<?php echo $user->isAvaliable ? "NotAvaliable" : "Avaliable"; ?>">
+                                </form>
+                            </td>
 
-        <?php
-        foreach ($users as $user) { ?>
-            <tr>
-                <td><?php echo $user->username; ?></td>
-                <td><?php echo $user->name; ?></td>
-                <td><?php echo $user->isActive ? "Active" : "Deactivated"; ?></td>
-                <td>
-                    <form name="activateForm" method="post" action="../BE/ActivateUser.php">
-                        <input type="hidden" name="id" value="<?php echo $user->id; ?>">
-                        <input type="hidden" name="activate" value="<?php echo $user->isActive ? 0 : 1; ?>">
-                        <input type="submit" value="<?php echo $user->isActive ? "Deactivate" : "Activate"; ?>">
-                    </form>
-                </td>
-                <td>
-                    <form name="deleteForm" method="post" action="../BE/DeleteUser.php">
-                        <input type="hidden" name="id" value="<?php echo $user->id; ?>">
-                        <input type="submit" value="Delete">
-                    </form>
-                </td>
-            </tr>
-        <?php
-        }
-        ?>
-    </table>
-<?php
-}
-?>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
+            <?php
+            }
+    
+    
+function AddMovie(){
+    ?>
+        <h1 style="text-align: center; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
+        <div class="container">
+            <div style="text-align: center;">
+                <div class="Form">
+                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Movie</h2>
+                    <form name="AddForm" id="add" action="AddMovie.php" method="POST">
+                        <div class="frm-element">
+                            <div class="frm-label">
+                                <label for="id">Movie ID: </label>
+                            </div>
+                            <input type="text" name="id" class="textfield">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="frm-element">
+                            <div class="frm-label">
+                                <label for="name">Movie Name: </label>
+                            </div>
+                            <input type="text" name="name" class="textfield">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="frm-element">
+                            <div class="frm-label">
+                                <label for="desc">Movie Description: </label>
+                            </div>
+                            <input type="text" name="desc" class="textfield">
+                        </div>
+                        <br>
+                        <br>
+                        <input type="button" name="add" value="Add" class="Button" style="margin-right: 30px;"
+                            onclick="AddFrm()">
+                        <input type="button" name="cancel" value="Cancel" class="Button" style="margin-left: 30px;"
+                            onclick="ResetFrm()">
+                        <br>
+                        <br>
+
+
+                        
+                </div>
+            </div>
+
+            </form>
+          </div>
+            <?php
+            }
+    
+
+        function Itemslist($items){
+            ?>
+            <h1>
+                    <center>
+                        List of Users
+                    </center>
+                </h1>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+            
+                    <?php
+                    foreach ($items as $item) { ?>
+                        <tr>
+                            <td><?php echo $item->id; ?></td>
+                            <td><?php echo $item->name; ?></td>
+                            <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
+                            <td>
+                                <form name="activateForm" method="post" action="../BE/AddMovie.php">
+                                    <input type="hidden" name="id" value="<?php echo $item->id; ?>">
+                                    <input type="hidden" name="activate" value="<?php echo $user->isAvaliable ? 0 : 1; ?>">
+                                    <input type="submit" value="<?php echo $user->isAvaliable ? "NotAvaliable" : "Avaliable"; ?>">
+                                </form>
+                            </td>
+
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
+            <?php
+            }
+            ?>
+
+    
+    

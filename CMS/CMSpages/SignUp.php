@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-
-    
+    require_once("../Controller/ViewController");
+    require_once("../Controller/ViewModel");
+   
     ?>
 
 <head>
@@ -69,85 +70,10 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
-        <h1 style="text-align: center; padding-bottom: 30px;"><span>Welcome..! Sign up to create your account</span></h1>
-        <div class="container">
-            <div style="text-align: center;">
-                <div class="Form">
-                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Sign Up</h2>
-                    <form name="SignUpForm" id="signup" action="signup.php" method="POST">
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="username">Username: </label>
-                            </div>
-                            <input type="text" name="username" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="firstname">First Name: </label>
-                            </div>
-                            <input type="text" name="firstname" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="lastname">Last Name: </label>
-                            </div>
-                            <input type="text" name="lastname" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="password">Password: </label>
-                            </div>
-                            <input type="password" name="password" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <div class="frm-label">
-                                <label for="cpass">Confirm Password: </label>
-                            </div>
-                            <input type="password" name="cpass" class="textfield">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <input id="rfemale" type="radio" name="sex" value="F">
-                            <label for="rfemale" style="padding-right: 20px;">Female</label>
-                            <input id="rmale" type="radio" name="sex" value="M">
-                            <label for="rmale" style="padding-left: 20px;">Male</label>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="frm-element">
-                            <input type="checkbox" name="cbcaptcha">
-                            <label for="cbcaptcha">I am human</label>
-                        </div>
-
-                        <br>
-                        <br>
-                        <input type="button" name="signup" value="Sign Up" class="Button" style="margin-right: 30px;"
-                            onclick="SignUpFrm()">
-                        <input type="button" name="cancel" value="Cancel" class="Button" style="margin-left: 30px;"
-                            onclick="ResetFrm()">
-                        <br>
-                        <br>
-
-
-                        <h3 style="padding-top: 40px;padding-bottom: 40px;">Already have an account? <a href="index.php">Log in here</a></h3>
-                </div>
-            </div>
-
-            </form>
-
-
-
-
-        </div>
+    <?php
+     SignUp();
+      
+      ?> 
     </div>
 
 
@@ -168,35 +94,9 @@ https://templatemo.com/tm-589-lugx-gaming
     <script src="../assets/js/owl-carousel.js"></script>
     <script src="../assets/js/counter.js"></script>
     <script src="../assets/js/custom.js"></script>
-
-    <script>
-        function SignUpFrm() {
-            let frm = document.querySelector("form[name='SignUpForm']")
-            let username = frm.elements["username"].value;
-            let firstname = frm.elements["firstname"].value;
-            let lastname = frm.elements["lastname"].value;
-            let password = frm.elements["password"].value;
-            let cpass = frm.elements["cpass"].value;
-            let sex = frm.elements["sex"].value;
-            let captcha = frm.elements["cbcaptcha"].checked;
-            console.log(frm.elements);
-           
-            if (captcha) {
-                frm.submit();
-            }
-        }
-        function ResetFrm() {
-            let frm = document.querySelector("form[name='SignUpForm']")
-            frm.elements["username"].value = "";
-            frm.elements["firstname"].value = "";
-            frm.elements["lastname"].value = "";
-            frm.elements["password"].value = "";
-            frm.elements["cpass"].value = "";
-            frm.elements["sex"].value = "F";
-            frm.elements["cbcaptcha"].checked = false;
-        }
-
-    </script>
+    <?php
+    SignUpScript(); 
+    ?>
 
 </body>
 

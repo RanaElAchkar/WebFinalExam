@@ -134,7 +134,7 @@ body {
 }
 
 .section-heading {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .section-heading h2 {
@@ -176,6 +176,53 @@ body {
   color: #fff;
 }
 
+/* 
+---------------------------------------------
+SignUp and LogIn Style
+--------------------------------------------- 
+*/
+
+.Form {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+  border-radius:0px  30px;
+  text-align: center;
+  border: 5px double black;
+  width: 50%;
+
+}
+.frm-element{
+  display: inline-block;
+}
+.frm-label{
+  text-align: left;
+  font-size: x-large;
+  width: 300px;
+}
+.textfield{
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 1px 0px 8px 0px;
+}
+.Button{
+  padding: 8px;
+  font-size: x-large; 
+  background: #146780;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.Button:hover{
+  background: transparent;
+  color: black;
+}
 /* 
 ---------------------------------------------
 Pre-loader Style
@@ -656,7 +703,7 @@ Banner Style
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 225px 0px;
+  padding: 100px 0px;
 }
 
 .main-banner .caption h6 {
@@ -1666,8 +1713,4 @@ body {
     margin-left: 0px;
     margin-top: 45px;
   }
-}
-
-@media (max-width: 1200px) {
-  
 }

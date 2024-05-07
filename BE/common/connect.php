@@ -13,7 +13,8 @@ $dbname= "moviebuff";
 $dbuser= "root";
 $dbpass="";
 try {
-    $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);		
+    $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
+    return $db;	
 } catch (PDOException $e) {
     print "Error!: " . $e->getMessage() . "<br/>";
     die();

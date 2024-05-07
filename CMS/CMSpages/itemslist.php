@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    require_once("../Controller/ViewModel");   
-?>
+    require_once("../Model/ViewModel.php");
+    require_once("../../BE/listMovies.php");
+   
+    ?>
 
 <head>
 

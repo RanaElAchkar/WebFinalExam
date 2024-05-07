@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<?php
-    require_once("../Controller/ViewController");
-    require_once("../Controller/ViewModel");   
-?>
+
+     <?php
+     require_once("../Controller/ViewController.php");
+     require_once("../Model/ViewModel.php");
+    
+     ?> 
+
 
 <html lang="en">
 

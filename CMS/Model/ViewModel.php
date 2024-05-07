@@ -91,10 +91,6 @@ function LogIn(){
 
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Log In</h2>
                     <form name="LogInForm" id="login" action="login.php" method="POST">
-
-                    <h2 style="padding-top: 40px;padding-bottom: 40px;">Sign Up</h2>
-                    <form name="LogInForm" id="login" action="../BE/login.php" method="POST">
-
                         <div class="frm-element">
                             <div class="frm-label">
                                 <label for="username">Username: </label>
@@ -137,7 +133,7 @@ function Itemslist($items){
                     <center>
                         List of Items
                     </center>
-                </h1>
+            </h1>
                 <table>
                     <tr>
                         <th>ID</th>
@@ -167,9 +163,7 @@ function Itemslist($items){
                     ?>
                 </table>
             <?php
-            }
-    
-    
+}   
 function AddMovie(){
     ?>
         <h1 style="text-align: center; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
@@ -218,46 +212,8 @@ function AddMovie(){
           </div>
             <?php
             }
-    
+    ?>
 
-        function Itemslist($items){
-            ?>
-            <h1>
-                    <center>
-                        List of Users
-                    </center>
-                </h1>
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-            
-                    <?php
-                    foreach ($items as $item) { ?>
-                        <tr>
-                            <td><?php echo $item->id; ?></td>
-                            <td><?php echo $item->name; ?></td>
-                            <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
-                            <td>
-                                <form name="activateForm" method="post" action="../BE/AddMovie.php">
-                                    <input type="hidden" name="id" value="<?php echo $item->id; ?>">
-                                    <input type="hidden" name="activate" value="<?php echo $user->isAvaliable ? 0 : 1; ?>">
-                                    <input type="submit" value="<?php echo $user->isAvaliable ? "NotAvaliable" : "Avaliable"; ?>">
-                                </form>
-                            </td>
-
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </table>
-            <?php
-            }
-            ?>
 
     
     

@@ -1,9 +1,5 @@
 <?php
 require_once("common/connect.php");
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a40ee8b4f6cbc17901c555b08fe66ea12a12173
     $un=$_POST["username"];      
     $pass=$_POST["password"];    
 

@@ -22,7 +22,7 @@ function Preloader(){
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="../../MainPage.html" class="logo">
-                            <img src="../assets/images/logoMovie.png" alt="" style="width: 158px;">
+                            <img src="CMS/assets/images/logo2.png" alt="" style="width: 70px;">
                         </a>
                         <!-- ***** Logo End ***** -->
                         
@@ -43,7 +43,7 @@ function Preloader(){
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="../../MainPage.html"class="logo">
-                        <img src="../assets/images/logoMovie.png" alt="" style="width: 158px;">
+                        <img src="CMS/assets/images/logo2.png" alt="" style="width: 70px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -70,8 +70,7 @@ function DisplayFooter(){
     <footer>
         <div class="container">
             <div class="col-lg-12">
-                <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow"
-                        href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+                <p style="color: white;">Unlock the power to curate and manage your movie streaming experience effortlessly with our comprehensive admin tools.</p>
             </div>
         </div>
     </footer>

@@ -61,11 +61,11 @@ https://templatemo.com/tm-589-lugx-gaming
 
     <div class="main-banner">
     <h3 style="text-align: center;padding-top: 30px; ">Welcome <?php echo $_SESSION["username"];?>!</h3>
-    <h1 style="text-align: center;padding-top: 40px; padding-bottom: 50px;"><span>Manage the List Of Movies</span></h1>
+    <h1 style="text-align: center;padding-top: 40px; padding-bottom: 50px;"><span>View the List Of Movies</span></h1>
     </div>
     <?php
      $items=listMovies();
-     ManageItemslist($items);
+     ViewItemslist($items);
     ?>
    <!-- footer-->
    <?php

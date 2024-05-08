@@ -125,11 +125,11 @@ function LogIn(){
           </div>
 <?php
 }
-function Itemslist($items){
+function ManageItemslist($items){
 ?>
             <h1>
                     <center>
-                        List of Items
+                        List of Movies
                     </center>
             </h1>
                 <table>
@@ -161,10 +161,39 @@ function Itemslist($items){
                     ?>
                 </table>
             <?php
-}   
+}  
+function ViewItemslist($items){
+    ?>
+                <h1>
+                        <center>
+                            List of Movies
+                        </center>
+                </h1>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                
+                        <?php
+                        foreach ($items as $item) { ?>
+                            <tr>
+                                <td><?php echo $item->id; ?></td>
+                                <td><?php echo $item->name; ?></td>
+                                <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </table>
+                <?php
+    }    
 function AddMovie(){
     ?>
-        <div style="text-align: center; padding-top: 100px; ">
+        <div style="text-align: center; padding-top: 100px;">
             <div style="text-align: center;">
                 <div class="Form">
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Movie</h2>

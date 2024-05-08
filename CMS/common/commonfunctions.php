@@ -22,7 +22,7 @@ function Preloader(){
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="../../MainPage.html" class="logo">
-                            <img src="CMS/assets/images/logo2.png" alt="" style="width: 70px;">
+                            <img src="../assets/images/logo2.png" alt="" style="width: 70px;">
                         </a>
                         <!-- ***** Logo End ***** -->
                         
@@ -50,7 +50,8 @@ function Preloader(){
                     <ul class="nav">
                       <li><a href="../CMSpages/SignUp.php" class="active">Sign Up</a></li>
                       <li><a href="../CMSpages/AddItem.php">Add Movies</a></li>
-                      <li><a href="../CMSpages/itemslist.php">Movie Manager</a></li>
+                      <li><a href="../CMSpages/itemslist.php">Manage Movies</a></li>
+                      <li><a href="../CMSpages/viewlist.php">View Movies</a></li>
                       <li><a href="../CMSpages/index.php">Log Out</a></li>
                   </ul>   
                     <a class='menu-trigger'>

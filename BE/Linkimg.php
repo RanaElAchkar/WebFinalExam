@@ -1,18 +1,20 @@
 <?php
-$movies = array(
-    array('id' => 1, 'title' => 'Movie 1', 'image_url' => 'movie1.jpg'),
-    array('id' => 2, 'title' => 'Movie 2', 'image_url' => 'movie2.jpg'),
-);
+require_once("common/connect.php");
 
-foreach ($movies as $movie) {
-    $movie_id = $movie['id'];
-    $movie_title = $movie['movie'];
-    $image_url = $movie['image_url'];
-    ?>
-    <a href="listMovies.php?id=<?php echo $movie_id; ?>"> 
-        <img src="<?php echo $image_url; ?>" alt="<?php echo $movie_title; ?>" width="200" height="300"> 
-        <h3><?php echo $movie_title; ?></h3>
-    </a>
-    <?php
+function ToggleAvailability($movie_id, $new_status) {
+    $db = dbconnect();
+
+    $update_query = "UPDATE movies SET `is_available` = $new_status WHERE id = $movie_id";
+    $db->query($update_query);
 }
+
+if (isset($_GET["id"]) && isset($_GET["new_status"])) {
+    $movie_id = intval($_GET["id"]); 
+    $new_status = intval($_GET["new_status"]); 
+
+    ToggleAvailability($movie_id, $new_status);
+}
+
+header("Location: {$_SERVER['HTTP_REFERER']}");
+exit;
 ?>

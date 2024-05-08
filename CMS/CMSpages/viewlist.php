@@ -20,11 +20,31 @@
 
     <title>List of Movies</title>
     <style>
-        td,
-        th {
-            border: 1px solid #a76767;
-        }
-    </style>
+        table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+</style>
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

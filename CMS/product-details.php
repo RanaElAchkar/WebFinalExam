@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once("../BE/common/connect.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,14 +56,21 @@ https://templatemo.com/tm-589-lugx-gaming
                     <a href="index.html" class="logo">
                         <img src="assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
+                    <?php if (isset($_SESSION["username"])){
+                      $db= dbconnect();
+                  $stmt= $db->query("SELECT username from users Where username= '$_SESSION[username]'");
+                  $record= $stmt->fetch();
+                  echo "Welcome, $_SESSION[username]";
+                  }
+                     ?>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html">Home</a></li>
-                      <li><a href="shop.html">Our Shop</a></li>
-                      <li><a href="product-details.html" class="active">Product Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#">Sign In</a></li>
+                      <li><a href="shop.php">Our Shop</a></li>
+                      <li><a href="product-details.php" class="active">Product Details</a></li>
+                      <li><a href="contact.php">Contact Us</a></li>
+                      <li><a href="SignUp.html">Sign In</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

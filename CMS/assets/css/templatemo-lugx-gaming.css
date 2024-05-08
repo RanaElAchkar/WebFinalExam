@@ -178,7 +178,7 @@ body {
 
 /* 
 ---------------------------------------------
-SignUp and LogIn Style
+Styling the forms
 --------------------------------------------- 
 */
 
@@ -188,7 +188,7 @@ SignUp and LogIn Style
   background-color: lightgrey;
   border-radius:0px  30px;
   text-align: center;
-  border: 5px double black;
+  border: 10px double black;
   width: 50%;
 
 }
@@ -212,10 +212,10 @@ SignUp and LogIn Style
 .Button{
   padding: 8px;
   font-size: x-large; 
-  background: #146780;
+  background: rgb(11, 149, 195);
   color: white;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 3px solid black;
   cursor: pointer;
 }
 
@@ -347,7 +347,7 @@ Header Style
 }
 
 .background-header .logo img {
-  max-width: 110px;
+  max-width: 80px;
 }
 
 .header-area {
@@ -420,7 +420,7 @@ Header Style
   padding-right: 20px;
   border-radius: 20px;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 20px;
   height: 40px;
   line-height: 40px;
   text-transform: capitalize;
@@ -655,7 +655,7 @@ Header Style
   }
   .header-area .logo {
     margin-left: 0px;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .header-area .menu-trigger {
     display: block !important;

@@ -1,17 +1,16 @@
 <?php
-require_once("common/connect.php");
-$un=$_POST["username"];      
-$pass=$_POST["password"];    
+require_once("common/connect.php");   
 $db= dbconnect();
-    $query="select user_id from users where username='$un' AND password='$pass'";
-    $stmt=$db->query($query);
-    $rowCount=$stmt->rowCount();
-    echo $rowCount;
-    if ($rowCount>0){
-        session_start();
-        $_SESSION["username"]=$un;
-        header("location:../CMS/shop.php");
-    }else{
-        header("location:../CMS/index.html");
-    }   
+if (isset($_POST['username']) && (isset($_POST['password']))){
+    $username= $_POST["username"];
+    $stmt = $db->query("SELECT password FROM users WHERE username = '$username'");
+    $record = $stmt->fetch();
+        if ($record>0 && password_verify($_POST['password'], $record['password'])) {
+            $_SESSION['username'] = $username;
+            header("Location: ../CMS/shop.php");
+        }
+        else{
+            header("Location: ../CMS/index.html");
+        }
+}
 ?>

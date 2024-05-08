@@ -1,5 +1,6 @@
 <?php
 require_once("common/connect.php");
+function SignProcess(){
 $db= dbconnect();
 $username= $_POST["username"];
 $password= $_POST["password"];
@@ -23,5 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION["username"]= $username;
         header("Location: ../CMS/index.html");
     }
+}
 }
 ?>

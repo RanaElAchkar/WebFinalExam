@@ -2,9 +2,9 @@
 session_start();
 require_once("common/connect.php");
 require_once("Post.php");
-
-function listMovies(){
 $db= dbconnect();
+function listMovies(){
+    global $db;
 $movies = [];
 $query = "SELECT * FROM table_movies";
 $result = $db->query($query);

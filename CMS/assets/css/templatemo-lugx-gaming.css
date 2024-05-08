@@ -188,7 +188,7 @@ Styling the forms
   background-color: lightgrey;
   border-radius:0px  30px;
   text-align: center;
-  border: 5px double black;
+  border: 10px double black;
   width: 50%;
 
 }
@@ -215,7 +215,7 @@ Styling the forms
   background: rgb(11, 149, 195);
   color: white;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 3px solid black;
   cursor: pointer;
 }
 

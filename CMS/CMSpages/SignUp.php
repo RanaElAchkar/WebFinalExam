@@ -51,11 +51,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
+    <h1 style="text-align: center;padding-top: 50px; padding-bottom: 50px;"><span>Welcome..! Sign up to create your account</span></h1>
+    </div>
     <?php
      SignUp();
       
-      ?> 
-    </div>
+    ?>
 
    <!-- footer-->
    <?php

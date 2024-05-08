@@ -1,12 +1,14 @@
 <?php
     session_start();
+    require_once("../Controller/ViewController.php");
     require_once("../Model/ViewModel.php");
-    require_once("../../BE/listMovies.php");
     require_once("../common/commonfunctions.php");
     if(!isset($_SESSION['username'])){
         header("location: index.php");
         exit();
      }
+    
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,10 +55,13 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
     <div class="main-banner">
-    <?php
-      AddMovie();
-    ?>
+    <h3 style="text-align: center;padding-top: 30px; ">Welcome <?php echo $_SESSION["username"];?>!</h3>
+    <h1 style="text-align: center;padding-top: 40px; padding-bottom: 50px;"><span>Add a New Movie</span></h1>
     </div>
+    <?php
+     AddMovie();
+      
+    ?>
 
 
    <!-- footer-->

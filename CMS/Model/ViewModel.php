@@ -1,8 +1,7 @@
 <?php
 function SignUp(){
     ?>
-<h1 style="text-align: center; padding-bottom: 30px;"><span>Welcome..! Sign up to create your account</span></h1>
-        <div class="container">
+        <div style="text-align: center; padding-top: 100px; ">
             <div style="text-align: center;">
                 <div class="Form">
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Sign Up</h2>
@@ -84,8 +83,7 @@ function SignUp(){
 }
 function LogIn(){
     ?>
-            <h1 style="text-align: center; padding-bottom: 30px;"><span>Welcome..! Log In here</span></h1>
-        <div class="container">
+        <div style="text-align: center; padding-top: 100px; ">
             <div style="text-align: center;">
                 <div class="Form">
 
@@ -166,8 +164,7 @@ function Itemslist($items){
 }   
 function AddMovie(){
     ?>
-        <h1 style="text-align: center;padding-top: 30px; padding-bottom: 30px;"><span>Add a new Movie</span></h1>
-        <div class="container">
+        <div style="text-align: center; padding-top: 100px; ">
             <div style="text-align: center;">
                 <div class="Form">
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Movie</h2>

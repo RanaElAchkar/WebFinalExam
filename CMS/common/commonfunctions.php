@@ -51,7 +51,7 @@ function Preloader(){
                       <li><a href="../CMSpages/SignUp.php" class="active">Sign Up</a></li>
                       <li><a href="../CMSpages/AddItem.php">Add Movies</a></li>
                       <li><a href="../CMSpages/itemslist.php">Movie Manager</a></li>
-                      <li><a href="#">Log Out</a></li>
+                      <li><a href="../CMSpages/index.php">Log Out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

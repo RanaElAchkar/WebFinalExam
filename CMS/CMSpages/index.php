@@ -51,13 +51,13 @@ https://templatemo.com/tm-589-lugx-gaming
       <!-- ***** Header Area End ***** -->
 
 
-
     <div class="main-banner">
-      <?php
-      LogIn();
-      ?>
+    <h1 style="text-align: center;padding-top: 50px; padding-bottom: 50px;"><span>Welcome..! Log In here</span></h1>
     </div>
-
+    <?php
+     LogIn();
+      
+    ?>
 
        <!-- footer-->
    <?php

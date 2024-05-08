@@ -5,7 +5,8 @@ function SignUp(){
             <div style="text-align: center;">
                 <div class="Form">
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Sign Up</h2>
-                    <form name="SignUpForm" id="signup" action="signup.php" method="POST">
+                    <form name="SignUpForm" id="signup" action="../../BE/Model/UserModel.php" method="POST">
+                    <input type="hidden" name="action" value="SIGNUP">
                         <div class="frm-element">
                             <div class="frm-label">
                                 <label for="username">Username: </label>
@@ -88,7 +89,8 @@ function LogIn(){
                 <div class="Form">
 
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Log In</h2>
-                    <form name="LogInForm" id="login" action="login.php" method="POST">
+                    <form name="LogInForm" id="login" action="../../BE/Model/UserModel.php" method="POST">
+                    <input type="hidden" name="action" value="LOGIN">
                         <div class="frm-element">
                             <div class="frm-label">
                                 <label for="username">Username: </label>
@@ -145,13 +147,13 @@ function ManageItemslist($items){
                     foreach ($items as $item) { ?>
                         <tr>
                             <td><?php echo $item->id; ?></td>
-                            <td><?php echo $item->name; ?></td>
-                            <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
+                            <td><?php echo $item->movie; ?></td>
+                            <td><?php echo $item->is_available ? "Available" : "Unavailable"; ?></td>
                             <td>
-                                <form name="activateForm" method="post" action="../BE/AddMovie.php">
+                                <form name="activateForm" method="post" action="../../BE/Model/MovieModel.php">
                                     <input type="hidden" name="id" value="<?php echo $item->id; ?>">
-                                    <input type="hidden" name="activate" value="<?php echo $user->isAvaliable ? 0 : 1; ?>">
-                                    <input type="submit" value="<?php echo $user->isAvaliable ? "NotAvaliable" : "Avaliable"; ?>">
+                                    <input type="hidden" name="activate" value="<?php echo $item->is_available ? 0 : 1; ?>">
+                                    <input type="submit" value="<?php echo $tem->is_avaliable ? "Unavailable" : "Available"; ?>">
                                 </form>
                             </td>
 
@@ -182,8 +184,8 @@ function ViewItemslist($items){
                         foreach ($items as $item) { ?>
                             <tr>
                                 <td><?php echo $item->id; ?></td>
-                                <td><?php echo $item->name; ?></td>
-                                <td><?php echo $item->isAvaliable ? "Avaliable" : "NotAvaliable"; ?></td>
+                                <td><?php echo $item->movie; ?></td>
+                                <td><?php echo $item->is_available ? "Avaliable" : "NotAvaliable"; ?></td>
                             </tr>
                         <?php
                         }
@@ -197,7 +199,7 @@ function AddMovie(){
             <div style="text-align: center;">
                 <div class="Form">
                     <h2 style="padding-top: 40px;padding-bottom: 40px;">Movie</h2>
-                    <form name="AddForm" id="add" action="AddMovie.php" method="POST">
+                    <form name="AddForm" id="add" action="../../BE/Model/MovieModel.php" method="POST">
                         <div class="frm-element">
                             <div class="frm-label">
                                 <label for="id">Movie ID: </label>
